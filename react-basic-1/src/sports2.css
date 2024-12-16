@@ -1,0 +1,15 @@
+#wrap{
+    width: 1100px;
+    margin: 0 auto;
+}
+section{
+    float: left;
+    text-align: center;
+    margin-left: 25px;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}

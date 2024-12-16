@@ -1,0 +1,20 @@
+@charset "utf-8";
+.font{
+    font-size: 32px;
+    font-weight: 700;
+}
+.color_red{
+    color: red;
+}
+.color_green{
+    color: green;
+}
+.color_blue{
+    color: blue;
+}
+.color_cyan{
+    color: cyan;
+}
+.color_skyblue{
+    color: skyblue;
+}
