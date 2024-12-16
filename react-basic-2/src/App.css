@@ -1,0 +1,45 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.home , .comp{
+    background-color: #378c5c;
+    height: 400px;
+    padding: 12px;
+}
+
+.header{
+    background-color: #bfa399;
+    height: 50px;
+    padding: 10px;
+}
+
+/* Link는 브라우저에서 a 태그로 변환됨 */
+.header a{
+    margin: 12px;
+}
+
+.footer{
+    background-color: #93bbbf;
+    height: 100px;
+    padding: 12px;
+}
+
+button{
+    width: 60px;
+    height: 30px;
+}
+
+.student{
+    display: inline-block;
+    margin: 12px;
+}
