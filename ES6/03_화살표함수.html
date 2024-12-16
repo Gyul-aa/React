@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 화살표 함수 (arrow function)
+        : ES6에 추가된 표현식을 사용하는 함수
+        화살표기 => 로 함수 선언
+        기본적으로 익명함수로 선언, 기존 익명함수를 변수에 할당하여 사용하는 방법과 유사
+        function 키워드 생략
+        인자블록(), 본문블록{} 사이에 => 를 표기
+        기본표기법 : (인자) => {실행문;}
+    </title>
+    <script>
+
+        // 1. ES5
+        // 1-a. 선언적 함수
+        // function add(first,second){
+        //     return first + second;
+        // }
+        // 1-b. 익명 함수
+        // var add = function(first,second){
+        //    return first + second;
+        // }
+        // 함수 호출
+        // alert(add(3,2));
+
+        // 2. ES6
+        // 2-1. 화살표 함수 => 기본 사용법(매개변수가 있는 경우)
+        // var add = (first,second)=>{
+        //     return first + second;
+        // }
+        // 함수 호출
+        // alert(add(3,2));
+        // 2-2. 화살표 함수 => 기본 사용법(매개변수가 없는 경우)
+        // var add = () => {
+        //     let first = 1;
+        //     let second = 2;
+        //     return first + second;
+        // }
+        // alert(add());
+
+        // 2-c. 화살표 함수 => 본문 블록을 생각할 수 있는 경우 = 결괏값을 바로 반환하는 경우
+        // var add = (first,second) => first + second;
+        // alert(add(3,2));
+
+        // 2-d. 화살표 함수 => 반환값이 객체면 ()로 감싸서 간결하게 표현 가능
+        var add = (first,second) => ({add: first+second,multiply: first*second});
+        alert(add(3,1));
+        console.log(add(3,1).add);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

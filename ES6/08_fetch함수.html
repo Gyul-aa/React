@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch() 함수</title>
+</head>
+<body>
+<p>
+    #. fetch()
+        : 서버로부터 데이터를 가져올 때 사용하는 비동기 HTTP 요청 함수
+        fetch() = Promise 객체를 반환, 요청이 완료되면 응답을 할 수 있게해줌
+    #. 작동방식
+        a. HTTP GET 방식으로 요청, 이외에 옵션으로 POST, PUT, DELETE로 지정 가능
+        b. 응답은 Promise로 반환, 그 응답은 then()에서 처리
+        = 응답데이터형 지정 가능 => .json() .text() 메서드 사용
+</p>
+<script>
+    // a. 기본형식 //
+    fetch(url,option)
+    .then(async response => {
+        // 요청 성공 시, 응답처리 
+        // await
+    })
+    .catch(error => {
+        // 요청 실패 시, 에러처리
+    })
+    // b. GET 방식 요청 //
+    fetch("http://api.com/data")
+    .then(response => {
+        return response.json();
+    })
+    .catch(error=>{})
+    // c. POST 방식 요청 //
+    fetch("http://api.com/data",{
+        method: "POST",
+        headers : {
+            "Content-Type" : "application/json"
+        },
+        body : JSON.stringify({})
+    })
+    .then(response => response.json())
+    .catch(error => {})
+</script>
+</body>
+</html>

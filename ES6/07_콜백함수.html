@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call-back function</title>
+</head>
+<body>
+    <h2>CallBack Function</h2>
+    <h3>함수 시퀀스 결괏값:</h3>
+    <div id="test1"></div>
+    <h3>콜백 함수 결괏값:</h3>
+    <div id="test2"></div>
+<script>
+    // #1. Function Sequence
+    // function myRender(call){
+    //     document.getElementById("test1").innerHTML = call;
+    // }
+    // function myFunction(num1,num2){
+    //     let sum = num1 + num2;
+    //     myRender(sum);
+    // }
+    // 함수 호출
+    // myFunction(5,5);
+
+    // #2. 콜백함수
+    // function myRender(call){
+    //     document.getElementById("test2").innerHTML = call;
+    // }
+    // // 함수
+    // function myFunction(num1,num2,myCallback){
+    //     let sum = num1 + num2;
+    //     myCallback(sum); // 실제 호출 인자는 MyRender 이므로 위에 콜백 호출
+    // }
+    // // 함수 호출
+    // myFunction(5,5,myRender)
+</script>
+</body>
+</html>

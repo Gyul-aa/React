@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 : 템플릿 문자열 = 문자열안에 변수와 연산식을 혼합하여 사용
+    </title>
+    <script>
+    // 1. ES5 Script
+        // a. 문자열과 변수를 연결 = +연산자 사용
+        var str1 = "안녕하세요.";
+        var str2 = "반갑습니다.";
+        var greeting = str1 + " " + str2;
+        document.write(greeting,"<br>");
+
+        // b. 객체 데이터
+        var product = {name: '도서', price: '4200원'};
+        console.log(typeof(product));
+
+        var message = '제품' + product.name + '의 가격은 ' + product.price + '입니다.';
+        document.write(message + "<br>");
+
+        // c. 숫자값
+        var val1 = 1;
+        var val2 = 2;
+        var op1 = '곱셈값은 '+(val1 * val2) + '입니다.';
+        document.write(op1+"<br>");
+        
+        // d. 논리값
+        var boolVal = false;
+        var op2 = '논리값은 '+ ( boolVal? '참' : '거짓' ) +' 입니다.';
+        document.write(op2+"<br>");
+        
+        document.write("<br>======================================<br>")
+
+
+    // 2. ES6 Script
+        // + 연산자를 개선한 템플릿 문자열 도입 | `(백틱) 사용
+        // a. 문자열과 변수를 연결 = `(백틱)으로 묶은후 ${변수 또는 식}
+        var str11 = "ES6 안녕하세요. <br>";
+        var str22 = "ES6 반갑습니다.";
+        var greeting = `${str11} ${str22}`;
+        document.write(greeting,"<br>");
+        
+        // b. 객체 데이터
+        var product2 = {name: '도서', price: '4200원'};
+        let message2 = `제품 ${product2.name}의 가격은 ${product2.price}입니다.`;
+        document.write(message2 + "<br>");
+
+        // c. 숫자값
+        var val11 = 1;
+        var val22 = 2;
+        var op11 = `곱셈값은 ${val11 * val22}입니다.`;
+        document.write(op11+"<br>");
+        
+        // d. 논리값
+        var boolVal = false;
+        var op22 = `논리값은 ${( boolVal? '참' : '거짓' )} 입니다.`;
+        document.write(op22+"<br>");
+        
+        document.write("<br>======================================<br>")
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

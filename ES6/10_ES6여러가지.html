@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 많이 사용되는 것</title>
+</head>
+<body>
+
+<div id="test"></div>
+<div id="test2"></div>
+
+<script>
+
+    // 구조분해 할당 -> 객체, 배열의 item들을 쉽게 분해해 변수에 할당
+
+    // #1-1. ES5
+    const car = ['Sorento', 'SE', 'SUV'];
+    const name = car[0];
+    const kind = car[1];
+    const concept = car[2];
+    console.log(name,kind,concept);
+
+    // #1-2. Destructing
+    const car2 = ['Sorento' , 'SE', 'SUV'];
+    const [name2, kind2, concept2] = car;
+    console.log(name2, kind2, concept2);
+
+    // #1-3. 함수 Destructing
+    function calculate(a,b){
+        const add = a+b;
+        const substract = a - b;
+        const multiply = a * b;
+        const divide = a / b;
+        return [add, substract, multiply, divide];
+    }
+    const[add, substract, multiply, divide] = calculate(4,7);
+    document.write("<p>더하기 : "+add+"</p>");
+    document.write("<p>빼기 : "+substract+"</p>");
+    document.write("<p>곱하기 : "+multiply+"</p>");
+    document.write("<p>나누기 : "+divide+"</p>");
+
+    // #1-4 객체 Destructuring
+    const vehicle = {
+        brand : "Kia",
+        model : "Sorento",
+        type : 'car',
+        year : '2013',
+        color : 'darkblue'
+    }
+    myVehicle(vehicle);
+    function myVehicle({type,color,brand,model}){
+        const message = 'Info' + type + color + brand + model + '.';
+        document.getElementById("test").innerHTML = message;
+    }
+
+    const student = {
+        name3 : "김민",
+        age : 11,
+        addr : "서울"
+    }
+    const {name3, age, addr} = student;
+    console.log(`name : ${name3}, age:${age}, addr : ${addr}`);
+
+    // #2. 스프레드 연산자
+
+    // 2-1 배열
+    const numberOne = [1,2,3];
+    const numberTwo = [4,5,6];
+    const combined = [...numberOne,...numberTwo];
+
+    // 2-2 객체
+    const vehicle2 = {
+        brand : 'Kia',
+        model : 'Sorento',
+        color : 'darkblue'
+    }
+    const updateVehicle = {
+        type : 'car',
+        year : '2015',
+        color : 'darkblue'
+    }
+    const myUpdate = { ...vehicle2, ...updateVehicle}
+    console.log(myUpdate);
+
+    // 3. 화살표 함수
+    // #3-1. 기본
+    hello = () => {
+        return "Hello javaScript";
+    }
+    // #3-2. return{} 생략 => 단일 표현식 반환시
+    hello = () => "Hello javaScript";
+
+    // #3-3. 매개변수가 있는 화살표 함수 한줄표현
+    hello = (val) => "Hello" + val;
+    document.getElementById("test2").innerHTML = hello("javaScript");
+
+    // #3-4. 매개변수 하나만 있는 경우 괄호 생략 가능
+    hello = val => "Hello javaScript";
+
+    // #3-5. 객체 반환시 괄호 감싸기 ()
+    const user = (name, age) => ({name, age});
+    console.log(user("mc",33));
+    
+</script> 
+
+</body>
+</html>
